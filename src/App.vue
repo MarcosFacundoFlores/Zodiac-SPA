@@ -148,7 +148,7 @@
 
 <script setup>
 import { ref } from "vue";
-import translateToSpanish from "./helpers/libretranslate.ts"
+import translateToSpanish from "./helpers/translateToSpanish.ts"
 
 // Datos de los signos zodiacales
 const zodiacSigns = [
