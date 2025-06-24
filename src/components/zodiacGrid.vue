@@ -35,13 +35,12 @@
 <script setup lang="ts">
 import type { ZodiacSign } from "../data/zodiacSigns";
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const _props = defineProps<{
+defineProps<{
   zodiacSigns: ZodiacSign[];
   getElementColor: (element: string) => string;
 }>();
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const _emit = defineEmits<{
+
+defineEmits<{
   (e: "select", sign: ZodiacSign): void;
 }>();
 </script>

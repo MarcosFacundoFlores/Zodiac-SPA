@@ -101,16 +101,17 @@
 
 <script setup lang="ts">
 import type { ZodiacSign } from "../data/zodiacSigns";
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const _props = defineProps<{
+defineProps<{
   selectedSign: ZodiacSign;
   horoscope: string;
   loading: boolean;
   getElementColor: (element: string) => string;
 }>();
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const _emit = defineEmits<{
+defineEmits<{
   (e: "back"): void;
 }>();
 </script>
+
+
+
