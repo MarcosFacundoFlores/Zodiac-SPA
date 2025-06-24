@@ -12,6 +12,7 @@
     "@tailwindcss/vite": "^4.1.10",
     "deepl-node": "^1.18.0",
     "dotenv": "^16.5.0",
+    "node-fetch": "^3.3.2",
     "vue": "^3.5.13"
   },
   "devDependencies": {
