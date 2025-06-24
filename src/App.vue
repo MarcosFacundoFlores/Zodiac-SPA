@@ -15,7 +15,7 @@
           :getElementColor="getElementColor"
           @select="selectSign"
         />
-        <FooterSection />
+
       </div>
 
       <div v-else class="flex items-center justify-center min-h-screen">
@@ -27,6 +27,7 @@
           @back="goBack"
         />
       </div>
+      <FooterSection />
     </div>
   </div>
 </template>
