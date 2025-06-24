@@ -102,7 +102,7 @@
 <script setup lang="ts">
 import type { ZodiacSign } from "../data/zodiacSigns";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const props = defineProps<{
+const _props = defineProps<{
   selectedSign: ZodiacSign;
   horoscope: string;
   loading: boolean;
@@ -110,7 +110,7 @@ const props = defineProps<{
 }>();
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const emit = defineEmits<{
+const _emit = defineEmits<{
   (e: "back"): void;
 }>();
 </script>
