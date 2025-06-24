@@ -1,7 +1,7 @@
-import type { VercelRequest, VercelResponse } from '@vercel/node';
+
 import fetch from 'node-fetch'; // 👈 Use this instead of global fetch
 
-export default async function handler(req: VercelRequest, res: VercelResponse) {
+export default async function handler(req, res) {
   const { sign } = req.query;
 
   if (!sign || typeof sign !== 'string') {

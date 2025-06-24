@@ -2,7 +2,7 @@ import { ref } from "vue";
 import { zodiacSigns, type ZodiacSign } from "../data/zodiacSigns";
 import translateToSpanish from "../helpers/translateToSpanish";
 
-export function useHoroscope() {
+export default function useHoroscope() {
   const selectedSign = ref<ZodiacSign | null>(null);
   const horoscope = ref("");
   const loading = ref(false);

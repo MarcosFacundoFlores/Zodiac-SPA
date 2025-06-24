@@ -1,16 +1,10 @@
-import type { VercelRequest, VercelResponse } from '@vercel/node';
 import fetch from 'node-fetch'; // 👈 THIS is critical
 const DEEPL_API_KEY = process.env.VITE_DEEPL_API_KEY; // 🔁 use process.env directly
 
-type DeepLResponse = {
-  translations: {
-    text: string;
-    detected_source_language: string;
-  }[];
-};
 
 
-export default async function handler(req: VercelRequest, res: VercelResponse) {
+
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Método no permitido' });
   }
@@ -39,7 +33,7 @@ try {
     return res.status(500).json({ error: 'Error en la API de DeepL', details: error });
   }
 
-  const data = (await response.json()) as DeepLResponse;
+  const data = await response.json();
   const translatedText = data.translations?.[0]?.text || '';
 
   return res.status(200).json({ translated: translatedText });

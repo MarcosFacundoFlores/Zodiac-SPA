@@ -39,7 +39,7 @@ import HeaderSection from "./components/headerSection.vue";
 import FooterSection from "./components/footerSection.vue";
 import ZodiacGrid from "./components/zodiacGrid.vue";
 import HoroscopeCard from "./components/horoscopeCard.vue";
-import { useHoroscope } from "./composables/useZodiac.ts";
+import  useHoroscope  from "./composables/useZodiac.ts";
 
 const {
   zodiacSigns,
