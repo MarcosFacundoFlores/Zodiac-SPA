@@ -2,7 +2,7 @@
 
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 
-const DEEPL_API_KEY = process.env.DEEPL_API_KEY;
+const DEEPL_API_KEY = process.env.VITE_DEEPL_API_KEY;
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== 'POST') {
@@ -43,3 +43,26 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(500).json({ error: 'Error interno del servidor' });
   }
 }
+
+/* 
+
+import * as deepl from 'deepl-node';
+import { env } from 'process';
+import.meta.env.VITE_DEEPL_API_KEY
+
+
+export default async function translateToSpanish(text: string): Promise<string> {
+
+  const authKey: string = env.VITE_DEEPL_API_KEY ?? "";
+  const translator = new deepl.Translator(authKey);
+
+  try {
+    const res = await translator.translateText(text, 'en', 'es');
+    return res.text;
+  } catch (err) {
+    console.error("Error en traducción:", err);
+    return text; // fallback si falla
+  }
+};
+
+*/
