@@ -2,7 +2,7 @@
   <div class="w-full max-w-2xl">
     <button
       @click="$emit('back')"
-      class="text-black hover:bg-white/10 mb-6 px-4 py-2 rounded-lg transition-colors duration-200 flex items-center"
+      class="mb-6 px-4 py-2 rounded-lg transition-colors duration-200 flex items-center"
       aria-label="Volver a los signos"
     >
       <svg
@@ -112,6 +112,3 @@ defineEmits<{
   (e: "back"): void;
 }>();
 </script>
-
-
-
